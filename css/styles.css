@@ -12,14 +12,12 @@
 
 /*Menu - header*/ 
 .menu{
-    /*background-color: aqua; Só para ver o que estou mudando */
     border-bottom: 1px solid lightgrey;
 }
 
 .nav-menu{
     width:87%;
     margin: 14px auto;
-    /*background-color: brown;tirar*/
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -174,10 +172,15 @@ main{
     margin-top: 25px;
 }
 
+.titulo-airbnb{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+}
+
 .titulo h1{
     font-size:27px;
     font-weight:420;
-    padding-right:450px;
     
 }
 
@@ -567,6 +570,7 @@ main{
 
 .preco-reserva{
     display: flex;
+    flex-wrap: wrap;
     gap:5px;
     align-items: last baseline;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -901,6 +905,7 @@ main{
 
 .periodo{
     font-weight: 300;
+    color:#717171;
 }
 
 .comentario-hospede{
@@ -935,8 +940,6 @@ main{
 .comentarios button:hover{
     cursor:pointer;
 }
-
-
 
 /*---------*/
 
@@ -1176,6 +1179,7 @@ main{
     margin-bottom: 20px;
 }
 
+
 /*Div deve saber*/
 .deve-saber{
     display: flex;
@@ -1201,8 +1205,11 @@ main{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 16px;
     font-weight: 300;
-    line-height: 34px;
     color:#222;
+}
+
+.ul-regras-casa li{
+    margin-top: 20px;
 }
 
 .ul-regras-casa li a{
@@ -1224,8 +1231,12 @@ main{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 15.5px;
     font-weight: 300;
-    line-height: 34px;
+    /*line-height: 34px;*/
     color:#222;
+}
+
+.ul-seguranca li{
+    margin-top: 20px;
 }
 
 .ul-seguranca li a{
@@ -1247,8 +1258,11 @@ main{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 15.5px;
     font-weight: 300;
-    line-height: 34px;
     color:#222;
+}
+
+.ul-cancelamento li{
+    margin-top: 20px;
 }
 
 .ul-cancelamento li a {
@@ -1266,7 +1280,7 @@ footer{
     width:100%;
     margin: auto;
     background-color: #F7F7F7;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid #EBEBEB;
 }
 
 /*3 infos sozinhas*/
@@ -1406,7 +1420,6 @@ footer{
     
 }
 
-
 .ul-idioma{
     list-style: none;
     font-size: 14px;
@@ -1448,3 +1461,539 @@ footer{
 .ul-redes-sociais li a{
     color:#222;
 }
+
+ /*Coisas que devem desaparecer no modo desktop*/
+ .no-desktop{
+    display: none;
+ }
+
+@media screen and (min-width:950px) {
+    /**/   
+}
+
+/*RESPONSIVIDADE TABLET*/
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /*Coisas que devem desaparecer no modo tablet*/
+    .no-tablet{
+        display: none;
+    }
+
+    #no-tablet{
+        display: none;
+    }
+
+    .no-desktop{
+        display:flex;
+     }
+    /*-----------------------------------*/
+
+    /*Menu*/
+    .menu{
+        border-bottom: 1px solid lightgrey;
+    }
+    
+    .nav-menu{
+        width:90%;
+        margin: 14px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height:50px;
+    }
+    
+    /*div logo*/
+    
+    .logo-airbnb{
+        color: #ff385c;
+    }
+    
+    /*buscas*/
+    
+    .buscas{
+        margin-left:27px;
+    }
+    
+    /*Div perfil e anuncie*/
+    
+    .anuncie-perfil{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap:15px;
+        align-items: center;
+    }
+    
+    /*div anuncie*/
+    
+    
+    .ul-anuncie{
+        list-style:none;
+        display: flex;
+        gap:10px;
+        align-items: center;
+    }
+    
+    #anuncie-aqui{
+        font-size:13px;
+        font-weight: 470;
+        margin-right: 0px;
+    }
+    
+    /*-------*/
+
+    main{
+        width:90%;
+        margin: auto;
+    }
+    /*fotos do airbnb*/
+    
+    .fotos{
+        display:grid;
+        grid-template-rows:160px 165px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin-top:20px;
+        gap:10px;
+    }
+    .fotos img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }  
+    .fotos .img-1{
+        grid-row: 1/3;
+        grid-column: 1/3;
+    }
+    .fotos .img-2{
+        grid-row: 1/3;
+        grid-column: 3/4;
+    }
+    .fotos .img-3{
+        grid-row: 1/3;
+        grid-column: 4/5 ;
+    }
+    .fotos .img-1 img{
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+    .fotos .img-3 img{
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+    
+    .mostrar-fotos{
+        background-color: white;
+        width:195px;
+        height:34px;
+        display: flex;
+        align-items: center;
+        border: 1px solid #000;
+        border-radius: 9px;
+        padding-left: 15px;
+        margin-top:-60px;
+        margin-left: 65.5%;
+        position: relative;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+       
+    }
+    /*---*/
+
+    /*fotos airbnb*/
+
+    /*---*/
+
+    /*Infos principais*/
+
+    #infos-principais{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /*preferido dos hospedes menor*/
+
+    .lado-esquerdo{
+        width:67%;
+    }
+
+    .preferido-dos-hospedes-menor{
+        width: 82%;
+        height: 77px;
+
+        text-align: center;
+        justify-content:space-around;
+        gap:10px;
+        padding-left: 10px;
+    }
+
+    .titulo-preferidos{
+        width: 160px;
+    }
+
+    .titulo-preferidos h4{
+        font-size: 16px;
+    }
+
+    .raminho{
+        width: 25px;
+        height: auto;
+    }
+
+    .texto-preferido{
+        display: none;
+    }
+
+    .nota-preferido {
+        border-left: 1px solid #EBEBEB;
+        width: 100px;
+        align-items: center;
+    }
+
+    .nota-preferido h4{
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .estrelas{
+        display: flex;
+        margin-top: 6px;
+        gap:2px;
+        justify-content: center;
+
+    }
+
+    /*Anfitião*/
+    .anfitriao{
+        margin-bottom: 23px;
+    }
+
+    #host-icon{
+        margin-top: -44px;
+        margin-left: 31px;
+        position: relative;
+        margin-bottom: 33px;
+    }
+
+    /*info-host-exp-pet*/
+    
+    .host-exp-pet{
+        display: flex;
+        align-items:normal;
+    }
+
+    .host-exp-pet-texto h2{
+        margin-bottom: 10px;
+    }
+
+
+/*Sobre o espaço ---- VOLTA AQUI*/
+
+.algumas-infos{
+    display:flex;
+    flex-direction: column;
+    align-items:end;
+}
+
+
+    /*O que esse lugar oferece*/
+
+
+    .ul-oferece-esqueda{
+        list-style: none;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 15.9px;
+        font-weight: 300;
+        line-height: 40px;
+        width: 350px;
+    }
+
+    .alarme-2{
+        text-decoration:line-through;
+    }
+
+    /*Card branco reserva*/
+
+    .lado-direito{
+        width:32%
+    }
+
+    .card-branco{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .nao-cobrado{
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .preco-final{
+        display: flex;
+        gap:40px;
+        justify-content: space-between;
+        margin-top: 30px;
+
+    }
+
+    /*---*/
+
+    /*Parte preferido dos hospedes + Notas da casa*/
+
+    .pref-texto h1{
+        font-size: 22px;
+        padding-bottom: 5px;
+    }
+
+    .pref-texto p{
+        font-size: 14px;
+        width: 300px;
+    }
+
+    /*---*/
+
+    /*Notas da casa*/
+
+    .notas-da-casa{
+        display: flex;
+        width: 100%;
+        justify-content:space-between;
+        gap:10px;
+        margin-top: 60px;
+        align-items:normal;
+        overflow-x: auto;
+    }
+
+    .notas-da-casa::-webkit-scrollbar{
+        width:0;
+    }
+
+    .divs-notas-casa{
+        height: 100px;
+        min-width:90px;
+        margin-bottom: 30px;
+        border-right: 1px solid #EBEBEB;
+        padding-right: 0px;
+    }
+
+    .divs-notas-casa:first-child{
+        min-width:120px;
+        padding-right: 10px;
+    }
+
+    .divs-notas-casa h3{
+        font-size: 11px;
+    }
+
+    .divs-notas-casa h2{
+        font-size: 15px;
+        margin-top: 4px;
+        margin-bottom: 30px;
+    }
+
+    .ul-avaliacao-geral{
+        list-style: none;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 10px;
+        margin-top: 6px;
+        line-height: 16px;
+    }
+
+    .ul-avaliacao-geral li{
+        display: flex;
+        align-items: center;
+    }
+
+    /*---*/
+
+    /*Comentario*/
+
+    .comentarios{
+        border-bottom: 1px solid #EBEBEB;
+        border-top: 1px solid #EBEBEB;
+
+        display: flex;
+        flex-direction: column;
+        gap:30px;
+    }
+
+    .comentario-1, .comentario-2, .comentario-3, .comentario-4, .comentario-5, .comentario-6{
+        height: auto;
+        width: 95%;
+    }
+
+    /*---*/
+
+    /*Quem vai receber você*/
+
+    .receber{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*host*/
+    .host{
+        padding-bottom: 40px;
+        border-bottom: 1px solid lightgray;
+        width: 370px;
+    }
+
+    .host-info{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    /*trabalho moro amante*/
+    .trabalho-moro-amo{
+        margin-left: 0px;
+    }
+
+    /*receber-esquerda*/
+
+    .receber-esquerda{
+        width:52%;
+        margin-top: 40px;
+    }
+
+    .botao-host button{
+        width:85%;
+    }
+
+    /*----------*/
+
+    /*O que você deve saber*/
+
+    /*Div deve saber*/
+    .deve-saber{
+        display: flex;
+        gap:60px;
+    }
+
+    /*Regras da casa*/
+
+    .regras-casa{
+        width:500px;
+        margin-bottom: 60px;
+    }
+
+    .ul-regras-casa li a{
+        margin-top: 30px;
+    }
+
+    /*Segurança*/
+
+    .seguranca{
+        width:500px;
+    }
+
+    .ul-seguranca li a{
+        margin-top: 30px;
+    }
+
+    /*Politica de cancelamento*/
+    .cancelamento{
+        width:550px;
+        margin-bottom: 60px;
+    }
+
+    .ul-cancelamento li a {
+        margin-top: 30px;
+
+    }
+
+    /*-----------------------------------*/
+
+    /*Footer*/
+
+    .tres-info{
+        width: 90%;
+    }
+
+    /*3 div de info*/
+    
+    .aha{
+        display: flex;
+        border-top: 1.5px solid #EBEBEB;
+        flex-direction: column;
+        justify-content:left;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 90%;
+        margin-left: 5%;
+    }
+    
+    /*Atendimento*/
+
+    .atendimento{
+        border-bottom: 1.5px solid #EBEBEB;
+        padding-bottom: 20px;
+        margin-left: 0;
+    }
+    
+    /*Hospedagem*/
+    
+    .hospedagem{
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    
+    /*Airbnb footer*/
+    
+    .airbnb-footer{
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top:1.5px solid #EBEBEB;
+        margin-left: 0;
+    }
+    
+    /*Rodapé parte final*/
+    
+    .rodape-final{
+        width: 90%;
+        margin: auto;
+        border-top: 1.5px solid #EBEBEB;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    
+    .ul-final{
+        font-size: 13.3px;
+        gap:10px;  
+    }
+    
+    .ul-final li {
+        margin-top:5px;
+    }
+    
+    /*Idiomas, dinheiro e Redes socias*/
+    
+    .idr{
+        gap:2rem;
+        margin-bottom: 20px; 
+    }
+
+    
+}
+
+
+
+/*RESPONSIVIDADE MOBILE*/
+
+@media screen and (max-width: 767px) {
+
+    .desktop{
+        display: none;
+    }
+    /*footer*/
+    
+}
+
