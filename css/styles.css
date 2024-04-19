@@ -718,6 +718,16 @@ main{
     font-weight: 600;
 }
 
+/*Card preço mais baixo*/
+.preco-mais-baixo{
+    margin-top: 20px;
+    padding: 5%;
+    border: 1px solid #EBEBEB;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+}
 
 
 /*------*/
@@ -1990,10 +2000,760 @@ footer{
 
 @media screen and (max-width: 767px) {
 
-    .desktop{
+    /*Coisas que devem desaparecer no modo MOBILE*/
+    .no-mobile{
         display: none;
     }
-    /*footer*/
+
+    .no-desktop{
+        display: flex;
+    }
+
+    .no-tablet{
+        display:none;
+    }
+
+    /*-------------------por enquanto----------------*/
+
+    body{
+        width: 100%;
+        position: relative;
+    }
+
+    main{
+        width:100%;
+    }
+
+    /*Tirar depois*/
+    .titulo{
+        display: none;
+    }
+
+    .comentarios{
+        border-bottom: 1px solid #EBEBEB;
+        border-top: 1px solid #EBEBEB;
+        background-color: #EBEBEB;
+
+        display: flex;
+        flex-direction: row;
+        gap:30px;
+
+        width: 100%;
+        height: 300px;
+        justify-content:space-between;
+        gap:10px;
+        padding-top: 40px;
+        margin-bottom: 60px;
+        align-items:normal;
+        overflow-x: auto;
+    }
+
+    #no-mobile{
+        display: none;
+    }
+
+    .comentarios::-webkit-scrollbar{
+        width:0;
+    }
+
+    /*VERIFICAR AQUI */
+    .comentario-1, .comentario-2, .comentario-3, .comentario-4, .comentario-5, .comentario-6{
+        height: 247px;
+        width: 100%;
+        border: 1px solid lightgrey;
+        border-radius: 10px;
+        padding:15px 15px;
+        
+    }
+    /*fotos do airbnb*/
+
+    /*airbnb fotos original*/
+
+
+    .fotos{
+        display: flex;
+        flex-direction:column;
+        width: 100%;
+        height: 300px;
+        justify-content:space-between;
+        overflow-x: auto;
+        
+        margin-top:0px;
+        gap:0px;
+    }
+
+    .fotos::-webkit-scrollbar{
+        width:0;
+    }
+
+    .fotos div{
+        width:100%;
+        height:100%;
+        border-top-left-radius: 0px;
+    }
+    .fotos img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+
+.fotos .img-1{
+    width:100%;
+    height:100%;
+}
+
+.fotos .img-1 img{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    width:100%;
+    height:100%;
+}
+
+.fotos .img-3 img{
+    border-top-right-radius: 0px;
+}
+
+.fotos .img-5 img{
+    border-bottom-right-radius: 0px;
+}
+
+
+
+    .mostrar-fotos{
+       display: none;
+    }
+
+
+    /*---*/
+
+    /*lugar*/
+    .lugar{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .lugar h1{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 250;
+        margin-top: 2px;
+        font-size:28px;
+    }
+
+    .lugar h2{
+        font-size: 16px;
+    }
+
+
+
+
+    /*---*/
+
+    /*Infos principais*/
+
+    #infos-principais{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /*preferido dos hospedes menor*/
+
+    .lado-esquerdo{
+        width:100%;
+    }
+
+    .preferido-dos-hospedes-menor{
+        width: 90%;
+        height: 77px;
+        display: grid;
+        grid-template-columns: 22% 55% 22%;
+        grid-template-rows: 77px;
+
+        text-align: center;
+        justify-content:space-around;
+        gap:1px;
+        margin-left: 5%;
+        padding-left: 0px;
+    }
+
+    .titulo-preferidos{
+        width: 135px;
+        grid-column: 2/3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-left: 1px solid #EBEBEB;
+        border-right: 1px solid #EBEBEB;
+        padding-right: 2px;
+        padding-left: 2px;
+
+    }
+
+    .titulo-preferidos h4{
+        font-size: 15px;
+    }
+
+    .raminho{
+        width: 25px;
+        height: auto;
+    }
+
+    .texto-preferido{
+        display: none;
+    }
+
+    .nota-preferido {
+        border-left: none;
+        width: 60px;
+        align-items: center;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .nota-preferido h4{
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .estrelas{
+        display: flex;
+        margin-top: 6px;
+        gap:2px;
+        justify-content: center;
+
+    }
+
+    .avaliacao-preferido{
+        width:50px;
+        border-left: none;
+    }
+
+    /*Anfitião*/
+    .anfitriao{
+        margin-bottom: 23px;
+        margin-left: 5%;
+        gap:10px;
+    }
+
+    #host-icon{
+        margin-top: -44px;
+        margin-left: 31px;
+        position: relative;
+        margin-bottom: 33px;
+    }
+
+    /*info-host-exp-pet*/
+
+    .info-host-exp-pet{
+        margin-left: 5%;
+    }
+
+    .host-exp-pet{
+        display: flex;
+        align-items:normal;
+    }
+
+    .host-exp-pet-texto h2{
+        margin-bottom: 10px;
+    }
+
+
+    /*Sobre o espaço */
+
+    .algumas-infos{
+        display:flex;
+        flex-direction: column;
+        align-items:start;
+    }
+
+    .infos-espaco{
+        width:90%;
+        padding-left: 5%;
+    }
+
+    /*O que esse lugar oferece*/
+
+    .o-que-oferece{
+        margin-left: 5%;
+    }
+
+    .ul-oferece-esqueda{
+        list-style: none;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 15.9px;
+        font-weight: 300;
+        line-height: 40px;
+        width: 300px;
+        
+    }
+
+    .alarme-2{
+        text-decoration:line-through;
+    }
+
+    /*Card branco reserva*/
+
+    .lado-direito{
+        display: none;
+    }
+
+    .card-branco{
+        display: none;
+    }
+
+    /*---*/
+
+    /*Parte mapa*/
+    .onde-estara-mobile{
+        display: flex;
+        flex-direction: column;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .onde-estara-mobile p{
+        font-size:15.5px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 300;
+        padding-top: 1px;
+        padding-bottom: 20px ;
+    }
+    .onde-estara-mobile img{
+        width: 100%;
+        height: 100%;
+    }
+
+    /*Parte calendário*/
+
+    .calendario{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .img-abril{
+        width: 100%;
+        height: auto;
+    }
+
+    /*Parte preferido dos hospedes + Notas da casa*/
+
+    #preferido-e-notas-casa{
+        background-color: #EBEBEB;
+    }
+
+    .pref-texto h1{
+        width: auto;
+        font-size: 22px;
+        padding-bottom: 5px;
+    }
+
+    .pref-texto p{
+        font-size: 14px;
+        width: 300px;
+    }
+
+    /*---*/
+
+    /*Notas da casa*/
+    .notas-da-casa{
+        display: none;
+    }
+
+    /*---*/
+
+    /*Comentario*/
+
+    .comentarios{
+        border-bottom: 1px solid #EBEBEB;
+        border-top: 1px solid #EBEBEB;
+        background-color: #EBEBEB;
+
+        display: flex;
+        flex-direction: row;
+        gap:30px;
+
+        width: 100%;
+        height: 300px;
+        justify-content:space-between;
+        gap:10px;
+        padding-top: 40px;
+        margin-bottom: 60px;
+        align-items:normal;
+        overflow-x: auto;
+    }
+
+    #no-mobile{
+        display: none;
+    }
+
+    .comentarios::-webkit-scrollbar{
+        width:0;
+    }
+    /*VERIFICAR AQUI */
+    .comentario-1, .comentario-2, .comentario-3, .comentario-4, .comentario-5, .comentario-6{
+        height: 247px;
+        width: 100%;
+        border: 1px solid lightgrey;
+        border-radius: 10px;
+        padding:15px 15px;
+        
+    }
+    .foto-nome{
+        margin-top: 20px;
+    }
+    .mostrar-comentarios{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color:black;
+        background-color: white;
+        height: 68px;
+        width:95%;
+        font-size:16px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        border-radius: 10px;
+        font-weight: 450;
+        border:1px solid #222;
+        margin-bottom: 50px;
+        margin-left: 3%;
+    }
+    .mostrar-comentarios button:hover{
+        cursor:pointer;
+    }
+
+    /*--ok--*/
+
+    /*Quem vai receber você*/
+    .receber{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .receber, .h2-titulo{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    /*host*/
+    #receber{
+        background-color: #f0efe9;
+        width: 100%;
+        margin-left: none;
+        margin-right: none;
+    }
+    /*Card branco*/
+    .host-info{
+        background-color: white;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+
+        height: auto;
+        width: 90%;
+
+        margin-left: 15px;
+        margin-top: 40px;
+        margin-right: 10px;
+    }
+    .imghost{
+        margin-left: 0px;
+        align-items: center;
+    }
+    .imghost img{
+        height:auto;
+        width:49%;
+        border-radius: 100px;
+    }
+    .avaliacoes-host{
+        display: flex;
+        flex-direction: column;
+        align-items:start;
+        margin-left: 25px;
+        margin-bottom: 20px;
+    }
+    /*trabalho moro amante*/
+    .trabalho-moro-amo{
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+        padding-bottom: 30px;
+        margin-right: 15px;
+        border-bottom: 1px solid lightgray;
+    }
+    /*receber-esquerda*/
+    .receber-esquerda{
+        width:90%;
+        margin-top: 40px;
+    }
+    .botao-host button{
+        height: 70px;
+        width:100%;
+    }
+   
+    /*-----ok-----*/
+
+    /*O que você deve saber*/
+
+    /*Div deve saber*/
+    .deve-saber{
+        width: 100%;
+        display: grid;
+        gap:0px;
+        margin-left: 5%;
+        margin-right: 5%;
+
+    }
+
+    .titulos-saber{
+        font-size: 25.5px;
+    }
+
+    /*Regras da casa*/
+
+    .regras-casa{
+        width:100%;
+        margin-bottom: 10px;
+        grid-row: 2/3;
+        border-bottom: 1px solid #ebebeb;
+        padding-bottom: 20px;
+
+    }
+
+    .ul-regras-casa{
+        font-weight: 200;
+    }
+
+    .ul-regras-casa li{
+        margin-top: 10px;
+    }
+
+    .ul-regras-casa li a{
+        color:#222;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+    }
+
+    /*Segurança*/
+
+    .seguranca{
+        width:100%;
+        margin-bottom: 10px;
+        grid-row: 3/4;
+        border-bottom: 1px solid #ebebeb;
+        padding-bottom: 20px;
+
+    }
+
+    .ul-seguranca{
+        font-weight: 200;
+    }
+
+    .ul-seguranca li{
+        margin-top: 10px;
+    }
+
+    .ul-seguranca li a{
+        color:#222;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+    }
+
+    /*Politica de cancelamento*/
+    .cancelamento{
+        width:100%;
+        margin-bottom: 10px;
+        grid-row: 1/2;
+        border-bottom: 1px solid #ebebeb;
+        padding-bottom: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .ul-cancelamento{
+        font-weight: 200;
+    }
+
+    .ul-cancelamento li{
+        margin-top: 10px;
+    }
+
+    .denunciar{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+
+    .denunciar a{
+        color:#222;
+        font-weight: 500;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    /*-----------------------------------*/
+
+    /*Footer*/
+
+    footer{
+        border-top: 8px solid #EBEBEB;
+    }
+    .tres-info{
+        width: 90%;
+    }
+
+    /*3 div de info*/
     
+    .aha{
+        display: flex;
+        border-top: 1.5px solid #EBEBEB;
+        flex-direction: column;
+        justify-content:left;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 90%;
+        margin-left: 5%;
+    }
+    
+    /*Atendimento*/
+
+    .atendimento{
+        border-bottom: 1.5px solid #EBEBEB;
+        padding-bottom: 20px;
+        margin-left: 0;
+    }
+    
+    /*Hospedagem*/
+    
+    .hospedagem{
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    
+    /*Airbnb footer*/
+    
+    .airbnb-footer{
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top:1.5px solid #EBEBEB;
+        margin-left: 0;
+    }
+    
+    /*Rodapé parte final*/
+    
+    .rodape-final{
+        width: 90%;
+        margin: auto;
+        border-top: 1.5px solid #EBEBEB;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: start;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        margin-bottom: 80px;
+    }
+    
+    .ul-final{
+        font-size: 13.3px;
+        gap:10px;  
+        display: flex;
+        flex-wrap: wrap;
+        line-height: 9px;
+    }
+
+    .no-desktop, .ul-final{
+        margin-bottom: 9px;
+    }
+    
+    .ul-final li {
+        margin-top:5px;
+    }
+    
+    /*Idiomas, dinheiro e Redes socias*/
+
+    .redes-sociais{
+        display: none;
+    }
+    
+    .idr{
+        gap:2rem;
+        margin-bottom: 20px; 
+    }
+
+    .idr a{
+        font-size: 14px;
+    }
+
+    /*Reserva mobile - VOLTA AQUI DEPOIS*/
+
+    .reserva-mobile{
+        width: auto;
+        display:flex;
+        justify-content: space-between;
+        gap:10px;
+        min-width: 320px;
+        height: 88px;
+        border-top: 1px solid lightgrey;
+
+        background-color: white;
+        position: fixed;
+        right:0;
+        left: 0%;
+        top: 82.9%;
+        padding-top: 18px;
+    }
+
+    .preco-noite-dia{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 14px;
+    }
+
+    .preco-noite{
+        display: flex;
+        align-items:last baseline;
+        gap:5px;
+
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 10px;
+    }
+    .preco-noite h2{
+        font-weight: 550;
+    }
+    .preco-noite h3{
+        font-weight: 300;
+    }
+
+    .dias{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 12px;
+        text-decoration: underline;
+        font-weight: 500;
+        display: flex;
+        align-self: self-start;
+        padding-top: 3px;
+    }
+
+    .botao-reserva{
+        padding-right: 10px;
+    }
+
+    .botao-reserva button{
+        background-color: #ff385c;
+        border:none;
+        border-radius: 8px;
+        width:145px;
+        height:48px;
+        color:white;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 15.5px;
+        font-weight: 400;
+    }
+
+    
+    .botao-reserva button:hover{
+        cursor: pointer;
+    }
 }
 
