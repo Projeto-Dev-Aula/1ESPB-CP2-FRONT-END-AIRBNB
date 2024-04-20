@@ -2215,16 +2215,25 @@ footer{
         border-left: none;
     }
 
+    /*Info preço menor*/
+    .preco-mais-baixo{
+        border: none;
+        margin-top:10px;
+    }
     /*Anfitião*/
     .anfitriao{
         margin-bottom: 23px;
         margin-left: 5%;
+        margin-right: 5%;
         gap:10px;
+        border-top: 1px solid #EBEBEB;
+        padding-top: 20px;
+        margin-top:20px;
     }
 
     #host-icon{
-        margin-top: -44px;
-        margin-left: 31px;
+        margin-top: -42px;
+        margin-left: 48px;
         position: relative;
         margin-bottom: 33px;
     }
