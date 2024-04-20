@@ -2024,100 +2024,45 @@ footer{
         width:100%;
     }
 
-    /*Tirar depois*/
     .titulo{
         display: none;
     }
-
-    .comentarios{
-        border-bottom: 1px solid #EBEBEB;
-        border-top: 1px solid #EBEBEB;
-        background-color: #EBEBEB;
-
-        display: flex;
-        flex-direction: row;
-        gap:30px;
-
-        width: 100%;
-        height: 300px;
-        justify-content:space-between;
-        gap:10px;
-        padding-top: 40px;
-        margin-bottom: 60px;
-        align-items:normal;
-        overflow-x: auto;
-    }
-
     #no-mobile{
         display: none;
     }
 
-    .comentarios::-webkit-scrollbar{
-        width:0;
-    }
-
-    /*VERIFICAR AQUI */
-    .comentario-1, .comentario-2, .comentario-3, .comentario-4, .comentario-5, .comentario-6{
-        height: 247px;
-        width: 100%;
-        border: 1px solid lightgrey;
-        border-radius: 10px;
-        padding:15px 15px;
-        
-    }
     /*fotos do airbnb*/
 
-    /*airbnb fotos original*/
-
-
-    .fotos{
+    /*airbnb fotos MOBILE*/
+    .fotos-mobile{
         display: flex;
-        flex-direction:column;
-        width: 100%;
+        flex-direction: row;
+        flex-wrap: nowrap;
         height: 300px;
-        justify-content:space-between;
-        overflow-x: auto;
-        
-        margin-top:0px;
-        gap:0px;
+        overflow: scroll;
+    }
+
+    .fotos-container{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        overflow-x: scroll;
     }
 
     .fotos::-webkit-scrollbar{
         width:0;
     }
 
-    .fotos div{
-        width:100%;
-        height:100%;
-        border-top-left-radius: 0px;
+    .fotos-container::-webkit-scrollbar{
+        width:0;
     }
-    .fotos img{
-        width:100%;
-        height:100%;
+
+    .fotos-container img{
+        width: 100vw;
+        height: 100%;
         object-fit:cover;
     }
-
-.fotos .img-1{
-    width:100%;
-    height:100%;
-}
-
-.fotos .img-1 img{
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    width:100%;
-    height:100%;
-}
-
-.fotos .img-3 img{
-    border-top-right-radius: 0px;
-}
-
-.fotos .img-5 img{
-    border-bottom-right-radius: 0px;
-}
-
-
+    
 
     .mostrar-fotos{
        display: none;
@@ -2127,6 +2072,7 @@ footer{
     /*---*/
 
     /*lugar*/
+
     .lugar{
         margin-left: 5%;
         margin-right: 5%;
@@ -2134,9 +2080,9 @@ footer{
 
     .lugar h1{
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-weight: 250;
+        font-weight: 400;
         margin-top: 2px;
-        font-size:28px;
+        font-size:25px;
     }
 
     .lugar h2{
@@ -2144,6 +2090,7 @@ footer{
     }
 
 
+    
 
 
     /*---*/
@@ -2255,7 +2202,6 @@ footer{
     .host-exp-pet-texto h2{
         margin-bottom: 10px;
     }
-
 
     /*Sobre o espaço */
 
@@ -2394,6 +2340,11 @@ footer{
         border: 1px solid lightgrey;
         border-radius: 10px;
         padding:15px 15px;
+        background-color: white;
+        
+    }
+
+    .comentario-1{
         
     }
     .foto-nome{
@@ -2494,7 +2445,7 @@ footer{
 
     /*Div deve saber*/
     .deve-saber{
-        width: 100%;
+        width: 90%;
         display: grid;
         gap:0px;
         margin-left: 5%;
@@ -2560,17 +2511,19 @@ footer{
 
     /*Politica de cancelamento*/
     .cancelamento{
-        width:100%;
+        width:90%;
         margin-bottom: 10px;
         grid-row: 1/2;
         border-bottom: 1px solid #ebebeb;
         padding-bottom: 20px;
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
 
     .ul-cancelamento{
         font-weight: 200;
+        width: 80%;
     }
 
     .ul-cancelamento li{
@@ -2736,7 +2689,7 @@ footer{
     }
 
     .botao-reserva{
-        padding-right: 10px;
+        padding-right: 14px;
     }
 
     .botao-reserva button{
