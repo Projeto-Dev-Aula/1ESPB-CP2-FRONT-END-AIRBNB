@@ -2013,7 +2013,7 @@ footer{
         display:none;
     }
 
-    /*-------------------por enquanto----------------*/
+    /*------------------------*/
 
     body{
         width: 100%;
@@ -2040,6 +2040,7 @@ footer{
         flex-wrap: nowrap;
         height: 300px;
         overflow: scroll;
+        position: relative;
     }
 
     .fotos-container{
@@ -2067,7 +2068,49 @@ footer{
     .mostrar-fotos{
        display: none;
     }
+    /*Seta compartilhar coracao*/
+    .seta-comp-coracao{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        background-color: transparent;
+        position: absolute;
+        padding-top: 5%;
+        padding-left: 5%;
+        
+    }
 
+    .seta a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        border-radius: 50px;
+        background-color: white;
+        border: none;
+        color:#000;
+        padding-left: 5%;
+
+    }
+    .comp-coracao{
+        display:flex;
+        flex-direction: row;
+        gap:10px;
+
+    }
+    .comp-coracao button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        border-radius: 50px;
+        background-color: white;
+        border: none;
+
+    }
 
     /*---*/
 
@@ -2076,6 +2119,8 @@ footer{
     .lugar{
         margin-left: 5%;
         margin-right: 5%;
+        padding-top: 1px;
+        padding-bottom: 20px;
     }
 
     .lugar h1{
@@ -2088,10 +2133,6 @@ footer{
     .lugar h2{
         font-size: 16px;
     }
-
-
-    
-
 
     /*---*/
 
@@ -2335,12 +2376,15 @@ footer{
     }
     /*VERIFICAR AQUI */
     .comentario-1, .comentario-2, .comentario-3, .comentario-4, .comentario-5, .comentario-6{
-        height: 247px;
-        width: 100%;
+        height: 267;
+        width: auto;
+        min-width: 260px;
         border: 1px solid lightgrey;
         border-radius: 10px;
         padding:15px 15px;
         background-color: white;
+        margin-left: 5%;
+        margin-right: 5%;
         
     }
 
